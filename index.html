@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Grid Layout</title>
+    <style>
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .video-pair, .central-video {
+            display: flex;
+            justify-content: space-between;
+            width: 60%; /* 增大宽度 */
+            margin-bottom: 40px; /* 增加间距 */
+        }
+        .central-video {
+            flex-direction: column; /* 改为垂直布局以便标签和视频上下排列 */
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+        .video-container {
+            text-align: center;
+            width: 48%; /* 确保两个视频对齐 */
+        }
+        video {
+            width: 100%;
+        }
+        .central-video video {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-grid">
+        <!-- First set of video pairs -->
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 1e5</label>
+                <video src="./alocasia/alocasia-100000.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 480000</label>
+                <video src="./alocasia/alocasia-model1.mp4" controls></video>
+            </div>
+        </div>
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 10000</label>
+                <video src="./alocasia/alocasia-10000.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 39000</label>
+                <video src="./alocasia/alocasia-model2.mp4" controls></video>
+            </div>
+        </div>
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 1e7</label>
+                <video src="./alocasia/alocasia-1e7.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 7e6</label>
+                <video src="./alocasia/alocasia-model3.mp4" controls></video>
+            </div>
+        </div>
+
+        <!-- Central video -->
+        <div class="central-video">
+            <label>young’s modulus = 3400000</label>
+            <video src="video7.mp4" controls></video>
+        </div>
+
+        <!-- Second set of video pairs -->
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 10000</label>
+                <video src="./telephone/telephone-10000.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 1000</label>
+                <video src="./telephone/telephone-model1.mp4" controls></video>
+            </div>
+        </div>
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 100000</label>
+                <video src="./telephone/telephone-100000.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 360000</label>
+                <video src="./telephone/telephone-model2.mp4" controls></video>
+            </div>
+        </div>
+        <div class="video-pair">
+            <div class="video-container">
+                <label>young’s modulus = 1e6</label>
+                <video src="./telephone/telephone-1e6.mp4" controls></video>
+            </div>
+            <div class="video-container">
+                <label>young’s modulus = 4200000</label>
+                <video src="./telephone/telephone-model3.mp4" controls></video>
+            </div>
+        </div>
+
+        <!-- Second central video -->
+        <div class="central-video">
+            <label>young’s modulus = 3400000</label>
+            <video src="./telephone/telephone-model4.mp4" controls></video>
+        </div>
+    </div>
+
+</body>
+</html>
